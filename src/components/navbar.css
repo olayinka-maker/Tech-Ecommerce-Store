@@ -1,0 +1,39 @@
+.navbar {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  color: #ffff;
+  width: 100%;
+  position: relative;
+  top: 0;
+  /* justify-content: space-between; */
+}
+.logo {
+  margin-right: 1rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.links {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+.myForm {
+  display: flex;
+  flex: 1;
+}
+.inputsearch {
+  margin-top: 0;
+  margin-left: 0;
+  width: auto;
+}
+.cart_box {
+  display: flex;
+  margin-left: 1rem;
+  align-items: center;
+  margin-right: 1rem;
+}
