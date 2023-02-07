@@ -11,8 +11,10 @@ const SignUp = () => {
     passwordConfirm: "",
   });
 
+  console.log(formData);
+
   const handleChange = (event) => {
-    const [name, value, type, checked] = event.target;
+    const { name, value, type, checked } = event.target;
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: type === "checkbox" ? checked : value,
@@ -30,58 +32,61 @@ const SignUp = () => {
   }
 
   return (
-    <div className="box">
-      <div className="registration-box">
-        <h2 className="reg">Register</h2>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <input
-              name="firstName"
-              className="signupINput"
-              defaultValue={formData.firstName}
-              type="text"
-              placeholder="First Name"
-              onChange={handleChange}
-            />
-            <input
-              name="lastName"
-              className="signupINput"
-              defaultValue={formData.lastName}
-              type="text"
-              placeholder="Last Name"
-              onChange={handleChange}
-            />
-          </div>
+    <div className="form-container">
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="First Name"
+          className="form--input"
+          name="firstNAme"
+          onChange={handleChange}
+          value={formData.firstName}
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
+          className="form--input"
+          name="firstNAme"
+          onChange={handleChange}
+          value={formData.lastName}
+        />
+        <input
+          type="email"
+          placeholder="Email address"
+          className="form--input"
+          name="email"
+          onChange={handleChange}
+          value={formData.email}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="form--input"
+          name="password"
+          onChange={handleChange}
+          value={formData.password}
+        />
+        <input
+          type="password"
+          placeholder="Confirm password"
+          className="form--input"
+          name="passwordConfirm"
+          onChange={handleChange}
+          value={formData.passwordConfirm}
+        />
+
+        <div className="form--marketing">
           <input
-            name="email"
-            className="signupINput"
-            defaultValue={formData.email}
-            type="email"
-            placeholder="Email"
+            id="okayToEmail"
+            type="checkbox"
+            name="joinedNewsletter"
             onChange={handleChange}
+            checked={formData.joinedNewsletter}
           />
-          <input
-            name="password"
-            className="signupINput"
-            defaultValue={formData.password}
-            type="password"
-            placeholder="Password"
-            onChange={handleChange}
-          />
-          <input
-            name="confirmPassword"
-            className="signupINput"
-            defaultValue={formData.passwordConfirm}
-            type="password"
-            placeholder="Confirm Password"
-            onChange={handleChange}
-          />
-          <div className="btn">
-            <button className="signup-btn"> Create Account</button>
-            <button className="signup-btn"> Already registered? Sign in</button>
-          </div>
-        </form>
-      </div>
+          <label htmlFor="okayToEmail">I want to join the newsletter</label>
+        </div>
+        <button className="form--submit">Sign up</button>
+      </form>
     </div>
   );
 };

@@ -1,55 +1,48 @@
-.box {
-  width: 100%;
+.form-container {
   height: 100vh;
-}
-.reg {
-  text-align: center;
-  font-size: 2rem;
-}
-.registration-box {
-  background-color: rgb(230, 220, 220);
-  margin: auto;
-  position: relative;
-  top: 2rem;
-  width: 50rem;
-  padding: 5rem;
-  border-radius: 0.7rem;
-}
-form {
+  padding: 20px;
   display: flex;
   flex-direction: column;
-}
-input {
-  width: 44rem;
-  padding: 0.9rem;
-  border-radius: 0.4rem;
-  outline: none;
-  border: none;
-  background-color: rgb(250, 248, 248);
-  margin-left: 2rem;
-  padding: 1rem;
-  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
-div > input {
-  width: 20rem;
-  padding: 0.9rem;
-  border-radius: 0.4rem;
-  outline: none;
-  border: none;
-  margin-left: 2rem;
-  background-color: rgb(250, 248, 248);
+.form {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.75);
 }
-.signup-btn {
-  padding: 1.2rem;
-  /* width: 10rem; */
+
+.form--input {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+  font-family: "Inter", sans-serif;
+}
+
+.form--submit {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
   color: white;
-  background-color: black;
+  background-color: #639;
   border: none;
-  border-radius: 1.6rem;
-  margin-left: 0.6rem;
+  cursor: pointer;
 }
-.btn {
-  margin: auto;
-  margin-top: 1.5rem;
+
+.form--marketing {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.form--marketing > input {
+  margin-right: 10px;
 }
